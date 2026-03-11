@@ -60,16 +60,14 @@ Technology Stack：
     - Microservices Architecture
     - Event-Driven Architecture
 
-  #System Flow：
-  
+System Flow：
     1. Market data is received from external APIs
     2. quote-service publishes events to Kafka
     3. Redis caches latest market data
     4. gateway-service pushes updates via WebSocket
     5. React dashboard displays real-time market data
 
-  #Features：
-  
+Features：
     - Real-time stock and crypto price streaming
     - Interactive candlestick charts
     - Company profile and financial metrics
