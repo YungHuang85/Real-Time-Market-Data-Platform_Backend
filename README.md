@@ -46,12 +46,6 @@ Technology Stack：
     - Spring WebSocket
     - Spring Kafka
 
-  #Frontend
-  
-    - React
-    - TypeScript
-    - Lightweight Charts
-
   #Infrastructure
   
     - Apache Kafka
