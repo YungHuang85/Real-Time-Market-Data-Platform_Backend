@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 21
+Implementation-Title: candle-service
+Implementation-Version: candle-service
+Created-By: Maven Integration for Eclipse
+

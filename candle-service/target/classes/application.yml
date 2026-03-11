@@ -1,0 +1,15 @@
+# Spring Boot 服務啟動的 port
+# 這個 microservice (candle-service) 會運行在 http://localhost:8082
+server:
+  port: 8082
+
+# AlphaVantage API key
+# 用來呼叫股票 K線 API
+# 在 AlphaVantageService 會透過 AlphaVantageProperties 讀取
+alphavantage:
+  key: EDJCQJVTNA0FNH4P.
+
+cors:
+  allowed-origins:
+    - http://localhost:5173  # React / Vite 前端開發伺服器
+    - http://localhost:8080  # gateway-service,因為 WebSocket / API gateway 在 8080

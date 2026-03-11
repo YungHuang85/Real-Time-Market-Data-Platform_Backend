@@ -1,0 +1,15 @@
+server:
+  port: 8081  # 設定 Spring Boot 服務啟動的 HTTP port，API 會跑在 http://localhost:8081
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092  # Kafka broker 位址，Producer/Consumer 都會連到這裡
+    producer:  # Kafka Producer 設定
+      # Kafka message key 序列化方式，將 key 轉為 String 傳送
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # Kafka message value 序列化方式，這裡是送 JSON
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+finnhub:
+  # Finnhub API Token, 用來呼叫 Finnhub REST API 與 WebSocket API
+  token: d6e12b9r01qmepi1d6s0d6e12b9r01qmepi1d6sg

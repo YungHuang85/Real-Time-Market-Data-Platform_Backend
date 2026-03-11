@@ -1,0 +1,26 @@
+# Spring Boot Gateway Service 的 HTTP port
+# API 與 WebSocket 都會跑在這個 port
+# 例如：# http://localhost:8080/api/price
+server:
+  port: 8080
+
+spring:
+  kafka:
+    # Kafka broker 位址
+    # Consumer 會連到這台 Kafka server
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: gateway-stock-group  # Kafka Consumer Group ID
+      auto-offset-reset: latest  			# 如果沒有 offset 時從哪裡開始讀, latest = 只讀新的訊息, earliest = 從最舊資料開始讀
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer  # Kafka message key 反序列化方式, 將 Kafka key 轉成 String
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer  # Kafka message value 反序列化方式, 你的 message 是 JSON 字串
+
+  data:
+    redis:
+      host: localhost
+      port: 6379  # Redis 預設 port,# Gateway Service 會把最新行情存到 Redis
+
+# 前端 CORS（React/Vite）
+cors:
+  allowed-origins:
+    - http://localhost:5173   # 允許這個來源跨域呼叫 API,5173 是 Vite / React dev server port
