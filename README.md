@@ -61,6 +61,7 @@ Technology Stack：
     - Event-Driven Architecture
 
 System Flow：
+
     1. Market data is received from external APIs
     2. quote-service publishes events to Kafka
     3. Redis caches latest market data
@@ -68,6 +69,7 @@ System Flow：
     5. React dashboard displays real-time market data
 
 Features：
+
     - Real-time stock and crypto price streaming
     - Interactive candlestick charts
     - Company profile and financial metrics
