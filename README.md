@@ -59,7 +59,7 @@ The system uses **Apache Kafka** for event streaming, **Redis** for real-time ca
                   +----------------+          +----------------+        +----------------+
                           |                            |                         |
                           | REST: /api/candles/{symbol}|                         |
-                          | (回傳 K 線資料)           |                         |
+                          | (回傳 K 線資料)             |                         |
                           |                            |                         |
                           +-------------+--------------+-------------------------+
                                         |
