@@ -144,6 +144,8 @@ The system uses Apache Kafka for event streaming, Redis for real-time caching, a
 - WebSocket live dashboard updates
 - Redis real-time cache layer
 
+## Project Structure
+
 ```text
 real-time-market-data-platform
 │
